@@ -1,18 +1,15 @@
 # 在双引号的中间粘贴上executable code, 点击运行即可
 
+from main_by_file import tranlate
 text = """
-00000000 <mian>:
-    0:        00600413        addi x8 x0 6
-    4:        00900493        addi x9 x0 9
-    8:        00940533        add x10 x8 x9
-
-0000000c <subroute>:
-    c:        00600413        addi x8 x0 6
-    10:        00900493        addi x9 x0 9
-    14:        00940533        add x10 x8 x9
+    0:        00200093        addi x1 x0 2
+    4:        00600113        addi x2 x0 6
+    8:        00000193        addi x3 x0 0
+    c:        00100213        addi x4 x0 1
+    10:        004181b3        add x3 x3 x4
+    14:        fe315ee3        bge x2 x3 -4
 """
 
-from main_by_file import tranlate
 
 mem = tranlate(text)
 print(mem)
